@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import Header from './Header';
 import Pokedex from './Pokedex';
 function App() {

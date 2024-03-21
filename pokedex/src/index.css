@@ -2,3 +2,49 @@ h1 {
   line-height: 45px;
   font-size: 2rem;
 }
+
+.pokemon-card {
+  display: inline-block; 
+  width: calc(25% - 100px); 
+  margin: 0 10px 20px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-image {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.pokemon-info {
+  margin-top: 20px;
+}
+
+.top-info {
+  text-align: center;
+}
+
+.rows {
+  display: flex;
+}
+
+.row1, .row2 {
+  flex: 1; /* Distribute space evenly */
+  display: flex;
+  flex-direction: column; /* Display children vertically */
+}
+
+.row2 {
+  margin-left: 20px; /* Add some space between row1 and row2 */
+}
+
+.stat {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+

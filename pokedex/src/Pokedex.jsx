@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes
 import Pokemon from './Pokemon';
 
 function Pokedex({ pokemonList }) {
@@ -11,10 +12,10 @@ function Pokedex({ pokemonList }) {
     return (
         <div className="pokedex-container">
             <div className="language-buttons">
-                <button class-name = "btnDesign" onClick={() => handleLanguageChange('english')}>English</button>
-                <button class-name = "btnDesign" onClick={() => handleLanguageChange('japanese')}>Japanese</button>
-                <button class-name = "btnDesign" onClick={() => handleLanguageChange('chinese')}>Chinese</button>
-                <button class-name = "btnDesign" onClick={() => handleLanguageChange('french')}>French</button>
+                <button className="btnDesign" onClick={() => handleLanguageChange('english')}>English</button>
+                <button className="btnDesign" onClick={() => handleLanguageChange('japanese')}>Japanese</button>
+                <button className="btnDesign" onClick={() => handleLanguageChange('chinese')}>Chinese</button>
+                <button className="btnDesign" onClick={() => handleLanguageChange('french')}>French</button>
             </div>
             <div className="pokemon-list">
                 {pokemonList.map((pokemon, index) => (
@@ -37,5 +38,10 @@ function Pokedex({ pokemonList }) {
         </div>
     );
 }
+
+// Validate prop types
+Pokedex.propTypes = {
+    pokemonList: PropTypes.array.isRequired, // Ensure pokemonList is provided and is an array
+};
 
 export default Pokedex;
